@@ -1,40 +1,37 @@
+html {
+  background: #527D99;
+}
+
+/* Overwrites */
+.button.is-large {
+  width: 25vw;
+  height: 25vw;
+  font-size: 10vw;
+  border-radius: 5px;
+}
+
+/* Header */
+.hero-body {
+  padding: 10vw 5vw;
+}
+
 .title {
   font-size: 8vw;
 }
 
-.mx-auto {
-  margin-left: auto;
-  margin-right: auto;
+/* Score board */
+.score-board {
+  padding: 10vw 5vw;
 }
 
-.mx-left {
-  margin-left: auto;
-}
-
-.mx-right {
-  margin-right: auto;
-}
-
-.figure {
-  max-width: 200px;
-}
-
-.justify-content-center {
-  justify-content: center !important;
-}
-
-.justify-content-space-between {
-  justify-content: space-between !important;
-}
-
-.align-items-center {
-  align-items: center;
-}
-
-.versus {
+.score-board .tag {
+  font-size: 3vw;
   font-family: 'Press Start 2P', cursive;
-  font-size: 7vw;
-  color: #fff;
+}
+
+/* Play area */
+.play-area {
+  padding: 0 5vw 10vw 5vw;
 }
 
 .play-area h2 {
@@ -44,10 +41,10 @@
 }
 
 .player-draw, .computer-draw {
-  width: 32vw;
-  height: 32vw;
+  width: 31vw;
+  height: 31vw;
   border-radius: 50%;
-  line-height: 32vw;
+  line-height: 31vw;
   border: 1vw solid #fff;
   text-align: center;
 }
@@ -61,8 +58,15 @@
   display: none;
 }
 
+.versus {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 6vw;
+  color: #fff;
+}
+
+/* Notification area */
 .notification-area {
-  padding: 0 8vw 16vw 8vw;
+  padding: 0 5vw 10vw 5vw;
 }
 
 .notification-body {
@@ -74,42 +78,12 @@
   padding: 2vw;
 }
 
-.border-gradient {
-  border-image-slice: 1;
-  border-width: 1vw;
-}
-.border-gradient-purple {
-  border-image: linear-gradient(to left, #d0eafb, #209cee);
-}
-
-.play-area {
-  padding: 0 8vw 16vw 8vw;
-}
-
-.score-board .tag {
-  font-size: 3vw;
-  font-family: 'Press Start 2P', cursive;
-}
-
-.score-board {
-  padding: 16vw 8vw;
-}
-
-.hero-body {
-  padding: 16vw 8vw;
-}
-
+/* Choices */
 .choices {
-  padding: 0 8vw 16vw 8vw;
+  padding: 0 5vw 10vw 5vw;
 }
 
-.button.is-large {
-  width: 25vw;
-  height: 25vw;
-  font-size: 10vw;
-  border-radius: 5px;
-}
-
+/* Footer */
 .footer {
   padding: 8vw 8vw;
   background-color: #527D99;
@@ -121,4 +95,32 @@
   text-decoration: none;
   color: #fff;
   font-weight: bold;
+}
+
+/* Helpers */
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.justify-content-space-between {
+  justify-content: space-between !important;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.border-gradient {
+  border-image-slice: 1;
+  border-width: 1vw;
+}
+
+.border-gradient-blue {
+  border-image: linear-gradient(to left, #d0eafb, #209cee);
+}
+
+/* Media queries */
+@media screen and (min-width: 769px) {
+  
 }
