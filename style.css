@@ -8,9 +8,9 @@ html {
 
 /* Overwrites */
 .button.is-large {
-  width: 90px; 
-  height: 90px;
-  font-size: 40px;
+  width: 27.5vw;
+  height: 27.5vw;
+  font-size: 12vw;
   border-radius: 0;
 }
 
@@ -20,7 +20,7 @@ html {
 }
 
 .title {
-  font-size: 30px;
+  font-size: 9vw;
 }
 
 /* Score board */
@@ -29,7 +29,7 @@ html {
 }
 
 .score-board .tag {
-  font-size: 10.5px;
+  font-size: 3.3vw;
   font-family: 'Press Start 2P', cursive;
 }
 
@@ -40,21 +40,21 @@ html {
 
 .play-area h2 {
   font-family: 'Press Start 2P', cursive;
-  font-size: 14px;
+  font-size: 4.4vw;
   color: #fff;
 }
 
 .player-hand, .computer-hand {
-  width: 100px;
-  height: 100px;
+  width: 31vw;
+  height: 31vw;
   border-radius: 50%;
-  line-height: 100px;
+  line-height: 31vw;
   border: 3px solid #fff;
   text-align: center;
 }
 
 .player-hand span, .computer-hand span {
-  font-size: 50px;
+  font-size: 15vw;
   color: #209cee;
 }
 
@@ -64,7 +64,7 @@ html {
 
 .versus {
   font-family: 'Press Start 2P', cursive;
-  font-size: 20px;
+  font-size: 6vw;
   color: #fff;
 }
 
@@ -75,7 +75,7 @@ html {
 
 .notification {
   font-family: 'Press Start 2P', cursive;
-  font-size: 12px;
+  font-size: 4vw;
   color: #fff;
   text-align: center;
   border-style: solid;
@@ -92,7 +92,7 @@ html {
   padding: 15px;
   background-color: #527D99;
   color: #fff;
-  font-size: 10px;
+  font-size: 4vw;
 }
 
 .footer a {
@@ -107,8 +107,8 @@ html {
   margin-right: auto;
 }
 
-.justify-content-center {
-  justify-content: center !important;
+.justify-content-space-between {
+  justify-content: space-between !important;
 }
 
 .align-items-center {
@@ -125,104 +125,38 @@ html {
 }
 
 /* Media queries */
-@media screen and (min-width: 375px) {
-  .title {
-    font-size: 35px;
-  }
-  .score-board .tag {
-    font-size: 12.5px;
-  }
-  .play-area h2 {
-    font-size: 16.5px;
-  }
-  .versus {
-    font-size: 24px;
-  }
-  .player-hand, .computer-hand {
-    width: 120px;
-    height: 120px;
-    line-height: 120px;
-  }
-  .player-hand span, .computer-hand span {
-    font-size: 60px;
-  }
-  .notification {
-    font-size: 14.5px;
-  }
-  .button.is-large {
-    width: 106px; 
-    height: 106px;
-    font-size: 50px;
-  }
-  .footer {
-    font-size: 12.5px;
-  }
-}
-
-@media screen and (min-width: 425px) {
-  .title {
-    font-size: 40px;
-  }
-  .score-board .tag {
-    font-size: 14.5px;
-  }
-  .play-area h2 {
-    font-size: 19px;
-  }
-  .versus {
-    font-size: 30px;
-  }
-  .player-hand, .computer-hand {
-    width: 140px;
-    height: 140px;
-    line-height: 140px;
-  }
-  .player-hand span, .computer-hand span {
-    font-size: 70px;
-  }
-  .notification {
-    font-size: 16px;
-  }
-  .button.is-large {
-    width: 124px; 
-    height: 124px;
-    font-size: 60px;
-  }
-  .footer {
-    font-size: 14px;
-  }
-}
-
 @media screen and (min-width: 480px) {
   .title {
-    font-size: 45px;
+    font-size: 43.11px;
   }
   .score-board .tag {
-    font-size: 17px;
+    font-size: 15.807px;
   }
   .play-area h2 {
-    font-size: 22px;
+    font-size: 21.076px;
   }
   .versus {
-    font-size: 35px;
+    font-size: 28.74px;
   }
   .player-hand, .computer-hand {
-    width: 160px;
-    height: 160px;
-    line-height: 160px;
+    width: 148.484px;
+    height: 148.484px;
+    line-height: 148.484px;
   }
   .player-hand span, .computer-hand span {
-    font-size: 80px;
+    font-size: 71.85px;
   }
   .notification {
-    font-size: 16px;
+    font-size: 19.16px;
   }
+
+  
   .button.is-large {
     width: 142px; 
     height: 142px;
     font-size: 70px;
   }
   .footer {
-    font-size: 14px;
+    font-size: 16px;
   }
 }
