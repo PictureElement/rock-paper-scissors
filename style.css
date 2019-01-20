@@ -2,55 +2,59 @@ html {
   background: #527D99;
 }
 
+.container {
+  max-width: 450px;
+}
+
 /* Overwrites */
 .button.is-large {
-  width: 25vw;
-  height: 25vw;
-  font-size: 10vw;
-  border-radius: 5px;
+  width: 90px; 
+  height: 90px;
+  font-size: 40px;
+  border-radius: 0;
 }
 
 /* Header */
 .hero-body {
-  padding: 10vw 5vw;
+  padding: 30px 15px;
 }
 
 .title {
-  font-size: 8vw;
+  font-size: 30px;
 }
 
 /* Score board */
 .score-board {
-  padding: 10vw 5vw;
+  padding: 30px 15px;
 }
 
 .score-board .tag {
-  font-size: 3vw;
+  font-size: 10.5px;
   font-family: 'Press Start 2P', cursive;
 }
 
 /* Play area */
 .play-area {
-  padding: 0 5vw 10vw 5vw;
+  padding: 0 15px 30px 15px;
 }
 
 .play-area h2 {
   font-family: 'Press Start 2P', cursive;
-  font-size: 4vw;
+  font-size: 14px;
   color: #fff;
 }
 
 .player-draw, .computer-draw {
-  width: 31vw;
-  height: 31vw;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
-  line-height: 31vw;
-  border: 1vw solid #fff;
+  line-height: 100px;
+  border: 3px solid #fff;
   text-align: center;
 }
 
 .player-draw span, .computer-draw span {
-  font-size: 15vw;
+  font-size: 50px;
   color: #209cee;
 }
 
@@ -60,35 +64,35 @@ html {
 
 .versus {
   font-family: 'Press Start 2P', cursive;
-  font-size: 6vw;
+  font-size: 20px;
   color: #fff;
 }
 
 /* Notification area */
 .notification-area {
-  padding: 0 5vw 10vw 5vw;
+  padding: 0 15px 30px 15px;
 }
 
 .notification-body {
   font-family: 'Press Start 2P', cursive;
-  font-size: 4vw;
+  font-size: 12px;
   color: #fff;
   text-align: center;
-  border: 1vw solid #fff;
-  padding: 2vw;
+  border-style: solid;
+  padding: 10px;
 }
 
 /* Choices */
 .choices {
-  padding: 0 5vw 10vw 5vw;
+  padding: 0 15px 30px 15px;
 }
 
 /* Footer */
 .footer {
-  padding: 8vw 8vw;
+  padding: 15px;
   background-color: #527D99;
   color: #fff;
-  font-size: 4vw;
+  font-size: 10px;
 }
 
 .footer a {
@@ -103,8 +107,8 @@ html {
   margin-right: auto;
 }
 
-.justify-content-space-between {
-  justify-content: space-between !important;
+.justify-content-center {
+  justify-content: center !important;
 }
 
 .align-items-center {
@@ -113,7 +117,7 @@ html {
 
 .border-gradient {
   border-image-slice: 1;
-  border-width: 1vw;
+  border-width: 3px;
 }
 
 .border-gradient-blue {
@@ -121,6 +125,104 @@ html {
 }
 
 /* Media queries */
-@media screen and (min-width: 769px) {
-  
+@media screen and (min-width: 375px) {
+  .title {
+    font-size: 35px;
+  }
+  .score-board .tag {
+    font-size: 12.5px;
+  }
+  .play-area h2 {
+    font-size: 16.5px;
+  }
+  .versus {
+    font-size: 24px;
+  }
+  .player-draw, .computer-draw {
+    width: 120px;
+    height: 120px;
+    line-height: 120px;
+  }
+  .player-draw span, .computer-draw span {
+    font-size: 60px;
+  }
+  .notification-body {
+    font-size: 14.5px;
+  }
+  .button.is-large {
+    width: 106px; 
+    height: 106px;
+    font-size: 50px;
+  }
+  .footer {
+    font-size: 12.5px;
+  }
+}
+
+@media screen and (min-width: 425px) {
+  .title {
+    font-size: 40px;
+  }
+  .score-board .tag {
+    font-size: 14.5px;
+  }
+  .play-area h2 {
+    font-size: 19px;
+  }
+  .versus {
+    font-size: 30px;
+  }
+  .player-draw, .computer-draw {
+    width: 140px;
+    height: 140px;
+    line-height: 140px;
+  }
+  .player-draw span, .computer-draw span {
+    font-size: 70px;
+  }
+  .notification-body {
+    font-size: 16px;
+  }
+  .button.is-large {
+    width: 124px; 
+    height: 124px;
+    font-size: 60px;
+  }
+  .footer {
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .title {
+    font-size: 45px;
+  }
+  .score-board .tag {
+    font-size: 17px;
+  }
+  .play-area h2 {
+    font-size: 22px;
+  }
+  .versus {
+    font-size: 35px;
+  }
+  .player-draw, .computer-draw {
+    width: 160px;
+    height: 160px;
+    line-height: 160px;
+  }
+  .player-draw span, .computer-draw span {
+    font-size: 80px;
+  }
+  .notification-body {
+    font-size: 16px;
+  }
+  .button.is-large {
+    width: 142px; 
+    height: 142px;
+    font-size: 70px;
+  }
+  .footer {
+    font-size: 14px;
+  }
 }
