@@ -44,7 +44,7 @@ html {
   color: #fff;
 }
 
-.player-draw, .computer-draw {
+.player-hand, .computer-hand {
   width: 100px;
   height: 100px;
   border-radius: 50%;
@@ -53,12 +53,12 @@ html {
   text-align: center;
 }
 
-.player-draw span, .computer-draw span {
+.player-hand span, .computer-hand span {
   font-size: 50px;
   color: #209cee;
 }
 
-.player-draw span:first-of-type, .computer-draw span:first-of-type {
+.player-hand span:first-of-type, .computer-hand span:first-of-type {
   display: none;
 }
 
@@ -73,7 +73,7 @@ html {
   padding: 0 15px 30px 15px;
 }
 
-.notification-body {
+.notification {
   font-family: 'Press Start 2P', cursive;
   font-size: 12px;
   color: #fff;
@@ -138,15 +138,15 @@ html {
   .versus {
     font-size: 24px;
   }
-  .player-draw, .computer-draw {
+  .player-hand, .computer-hand {
     width: 120px;
     height: 120px;
     line-height: 120px;
   }
-  .player-draw span, .computer-draw span {
+  .player-hand span, .computer-hand span {
     font-size: 60px;
   }
-  .notification-body {
+  .notification {
     font-size: 14.5px;
   }
   .button.is-large {
@@ -172,15 +172,15 @@ html {
   .versus {
     font-size: 30px;
   }
-  .player-draw, .computer-draw {
+  .player-hand, .computer-hand {
     width: 140px;
     height: 140px;
     line-height: 140px;
   }
-  .player-draw span, .computer-draw span {
+  .player-hand span, .computer-hand span {
     font-size: 70px;
   }
-  .notification-body {
+  .notification {
     font-size: 16px;
   }
   .button.is-large {
@@ -206,15 +206,15 @@ html {
   .versus {
     font-size: 35px;
   }
-  .player-draw, .computer-draw {
+  .player-hand, .computer-hand {
     width: 160px;
     height: 160px;
     line-height: 160px;
   }
-  .player-draw span, .computer-draw span {
+  .player-hand span, .computer-hand span {
     font-size: 80px;
   }
-  .notification-body {
+  .notification {
     font-size: 16px;
   }
   .button.is-large {
