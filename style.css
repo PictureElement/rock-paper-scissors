@@ -50,7 +50,7 @@ body {
   color: #fff;
 }
 
-.player-hand, .computer-hand {
+.user-hand, .computer-hand {
   width: 31vw;
   height: 31vw;
   border-radius: 50%;
@@ -59,12 +59,12 @@ body {
   text-align: center;
 }
 
-.player-hand span, .computer-hand span {
+.user-hand span, .computer-hand span {
   font-size: 15vw;
   color: #209cee;
 }
 
-.player-hand span:first-of-type, .computer-hand span:first-of-type {
+.user-hand span:not(:last-child), .computer-hand span:not(:last-child) {
   display: none;
 }
 
@@ -144,12 +144,12 @@ body {
   .versus {
     font-size: 28.74px;
   }
-  .player-hand, .computer-hand {
+  .user-hand, .computer-hand {
     width: 148.484px;
     height: 148.484px;
     line-height: 148.484px;
   }
-  .player-hand span, .computer-hand span {
+  .user-hand span, .computer-hand span {
     font-size: 71.85px;
   }
   .notification {

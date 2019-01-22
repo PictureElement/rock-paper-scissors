@@ -10,6 +10,8 @@ const notification_dom = document.getElementById("notification");
 const rock_dom = document.getElementById("rock");
 const paper_dom = document.getElementById("paper");
 const scissors_dom = document.getElementById("scissors");
+const userHand_dom = document.getElementById("userHand");
+const computerHand_dom = document.getElementById("computerHand");
 
 /* Get computer hand */
 function getComputerHand() {
@@ -29,21 +31,77 @@ function getComputerHand() {
   return hand;
 }
 
+function updateHand(hand, hand_dom) {
+  // Clear hand
+  for (let i = 0; i < hand_dom.children.length; i++) {
+    hand_dom.children[i].style.display = "none";
+  }
+
+  // Update hand
+  switch (hand) {
+    case "Rock":
+      hand_dom.children[0].style.display = "block";
+      break;
+    case "Paper":
+      hand_dom.children[1].style.display = "block";
+      break;
+    case "Scissors":
+      hand_dom.children[2].style.display = "block";
+      break;
+  }
+}
+
 function win(userHand, computerHand) {
+  // Update score
   userWins++;
   userWins_dom.innerHTML = userWins;
+
+  // Update user hand
+  updateHand(userHand, userHand_dom);
+
+  // Update computer hand
+  updateHand(computerHand, computerHand_dom);
+
+  // Update color indication
+  userHand_dom.style.borderColor = 'green';
+  
+  // Notify
   notification_dom.innerHTML = `${userHand} beats ${computerHand}. You've won!`;
 }
 
 function lose(userHand, computerHand) {
+  // Update score
   computerWins++;
   computerWins_dom.innerHTML = computerWins;
+
+  // Update user hand
+  updateHand(userHand, userHand_dom);
+
+  // Update computer hand
+  updateHand(computerHand, computerHand_dom);
+  
+  // Update color indication
+  userHand_dom.style.borderColor = 'red';
+
+  // Notify
   notification_dom.innerHTML = `${userHand} loses to ${computerHand}. You've lost.`;
 }
 
 function tie(userHand, computerHand) {
+  // Update score
   ties++;
   ties_dom.innerHTML = ties;
+
+  // Update user hand
+  updateHand(userHand, userHand_dom);
+
+  // Update computer hand
+  updateHand(computerHand, computerHand_dom);
+
+  // Update color indication
+  userHand_dom.style.borderColor = 'yellow';
+
+  // Notify
   notification_dom.innerHTML = `${computerHand} equals ${userHand}. It's a draw.`;
 }
 
