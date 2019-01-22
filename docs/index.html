@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Rock-paper-scissors</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+  </head>
+  <body>
+    <header class="hero is-info is-bold">
+      <div class="hero-body">
+        <div class="container">
+          <h1 class="title has-text-centered">
+            Rock-paper-scissors
+          </h1>
+        </div>
+      </div>
+    </header>
+    <section class="section score-board has-background-dark">
+      <div class="container">
+        <div class="field is-grouped justify-content-space-between">
+          <div class="control">
+            <div class="tags has-addons">
+              <span class="tag is-light">Wins</span>
+              <span id="userWins" class="tag is-success">0</span>
+            </div>
+          </div>
+          <div class="control">
+            <div class="tags has-addons">
+              <span class="tag is-light">Ties</span>
+              <span id="ties" class="tag is-warning">0</span>
+            </div>
+          </div>
+          <div class="control">
+            <div class="tags has-addons">
+              <span class="tag is-light">Loses</span>
+              <span id="computerWins" class="tag is-danger">0</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section play-area has-background-dark">
+      <div class="container">
+        <div>
+          <div class="columns is-mobile is-variable is-1">
+            <div class="column is-two-fifths">
+              <h2 class="has-text-centered">Player</h2>
+            </div>
+            <div class="column"></div>
+            <div class="column is-two-fifths">
+              <h2 class="has-text-centered">Computer</h2>
+            </div>
+          </div>
+        </div>
+        <div class="columns is-mobile align-items-center">
+          <div class="column is-two-fifths">
+            <div id="userHand" class="user-hand mx-auto">
+              <span><i class="fas fa-hand-rock"></i></span>
+              <span><i class="fas fa-hand-paper"></i></span>
+              <span><i class="fas fa-hand-scissors"></i></span>
+              <span><i class="fas fa-question"></i></span>
+            </div>
+          </div>
+          <div class="column has-text-centered">
+            <span class="versus">VS</span>
+          </div>
+          <div class="column is-two-fifths">
+            <div id="computerHand" class="computer-hand mx-auto">
+              <span><i class="fas fa-hand-rock"></i></span>
+              <span><i class="fas fa-hand-paper"></i></span>
+              <span><i class="fas fa-hand-scissors"></i></span>
+              <span><i class="fas fa-question"></i></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section choices has-background-dark">
+      <div class="container">
+        <div class="field is-grouped justify-content-space-between">
+          <p class="control">
+            <a id="rock" class="button is-info">
+              <i class="far fa-hand-rock"></i>
+            </a>
+          </p>
+          <p class="control">
+            <a id="paper" class="button is-info">
+              <i class="far fa-hand-paper"></i>
+            </a>
+          </p>
+          <p class="control">
+            <a id="scissors" class="button is-info">
+              <i class="far fa-hand-scissors"></i>
+            </a>
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="section notification-area has-background-dark">
+      <div class="container">
+        <div id="notification" class="notification border-gradient border-gradient-blue has-background-dark">
+          Make your move
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="content has-text-centered">
+        <p style="opacity:0.7;">
+         <span style="color:#fff;"><i class="fas fa-code"></i></span> with <span style="color:#fff;"><i class="fas fa-heart"></i></span> by <a href="https://msof.me">Marios Sofokleous</a>.
+        </p>
+      </div>
+    </footer>
+    <script src="app.js"></script>
+  </body>
+</html>
