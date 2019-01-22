@@ -130,6 +130,18 @@ body {
   border-image: linear-gradient(to left, #d0eafb, #209cee);
 }
 
+.green-border {
+  border-color: #23d160;
+}
+
+.red-border {
+  border-color: #ff3860;
+}
+
+.yellow-border {
+  border-color: #ffdd57;
+}
+
 /* Media queries */
 @media screen and (min-width: 480px) {
   .title {

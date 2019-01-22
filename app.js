@@ -63,7 +63,8 @@ function win(userHand, computerHand) {
   updateHand(computerHand, computerHand_dom);
 
   // Update color indication
-  userHand_dom.style.borderColor = 'green';
+  userHand_dom.classList.remove("green-border", "red-border", "yellow-border")
+  userHand_dom.classList.add("green-border");
   
   // Notify
   notification_dom.innerHTML = `${userHand} beats ${computerHand}. You've won!`;
@@ -81,7 +82,8 @@ function lose(userHand, computerHand) {
   updateHand(computerHand, computerHand_dom);
   
   // Update color indication
-  userHand_dom.style.borderColor = 'red';
+  userHand_dom.classList.remove("green-border", "red-border", "yellow-border")
+  userHand_dom.classList.add("red-border");
 
   // Notify
   notification_dom.innerHTML = `${userHand} loses to ${computerHand}. You've lost.`;
@@ -99,7 +101,8 @@ function tie(userHand, computerHand) {
   updateHand(computerHand, computerHand_dom);
 
   // Update color indication
-  userHand_dom.style.borderColor = 'yellow';
+  userHand_dom.classList.remove("green-border", "red-border", "yellow-border")
+  userHand_dom.classList.add("yellow-border");
 
   // Notify
   notification_dom.innerHTML = `${computerHand} equals ${userHand}. It's a draw.`;
