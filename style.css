@@ -74,6 +74,11 @@ body {
   color: #fff;
 }
 
+/* Choices */
+.choices {
+  padding: 0 15px 30px 15px;
+}
+
 /* Notification area */
 .notification-area {
   padding: 0 15px 30px 15px;
@@ -85,12 +90,7 @@ body {
   color: #fff;
   text-align: center;
   border-style: solid;
-  padding: 10px;
-}
-
-/* Choices */
-.choices {
-  padding: 0 15px 30px 15px;
+  padding: 10px 15px 10px 15px;
 }
 
 /* Footer */

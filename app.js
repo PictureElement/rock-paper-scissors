@@ -99,7 +99,7 @@ function win(userHand, computerHand) {
   notification_dom.innerHTML = `${userHand} beats ${computerHand}. You've won!`;
 
   // Reset state
-  setTimeout(function() { resetState() }, 3000);
+  setTimeout(() => resetState(), 3000);
 }
 
 function lose(userHand, computerHand) {
@@ -121,7 +121,7 @@ function lose(userHand, computerHand) {
   notification_dom.innerHTML = `${userHand} loses to ${computerHand}. You've lost.`;
 
   // Reset state
-  setTimeout(function() { resetState() }, 3000);
+  setTimeout(() => resetState(), 3000);
 }
 
 function tie(userHand, computerHand) {
@@ -143,7 +143,7 @@ function tie(userHand, computerHand) {
   notification_dom.innerHTML = `${computerHand} equals ${userHand}. It's a draw.`;
 
   // Reset state
-  setTimeout(function() { resetState() }, 3000);
+  setTimeout(() => resetState(), 3000);
 }
 
 /* Play game */
