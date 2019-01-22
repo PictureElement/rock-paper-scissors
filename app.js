@@ -1,5 +1,6 @@
-const userWins = 0;
-const computerWins = 0;
+var userWins = 0;
+var computerWins = 0;
+var ties = 0;
 
 /* DOM elements */
 const userWins_dom = document.getElementById("userWins");
@@ -16,16 +17,34 @@ function getComputerHand() {
   let hand = "";
   switch (num) {
     case 0:
-      hand = "rock";
+      hand = "Rock";
       break;
     case 1:
-      hand = "paper";
+      hand = "Paper";
       break;
     case 2:
-      hand = "scissors";
+      hand = "Scissors";
       break;
   }
   return hand;
+}
+
+function win(userHand, computerHand) {
+  userWins++;
+  userWins_dom.innerHTML = userWins;
+  notification_dom.innerHTML = `${userHand} beats ${computerHand}. You've won!`;
+}
+
+function lose(userHand, computerHand) {
+  computerWins++;
+  computerWins_dom.innerHTML = computerWins;
+  notification_dom.innerHTML = `${userHand} loses to ${computerHand}. You've lost.`;
+}
+
+function tie(userHand, computerHand) {
+  ties++;
+  ties_dom.innerHTML = ties;
+  notification_dom.innerHTML = `${computerHand} equals ${userHand}. It's a draw.`;
 }
 
 /* Play game */
@@ -33,37 +52,40 @@ function play(userHand) {
   let computerHand = getComputerHand();
   switch (userHand + computerHand) {
     /* Win scenarios */
-    case "rockscissors":
-    case "paperrock":
-    case "scissorspaper":
+    case "RockScissors":
+    case "PaperRock":
+    case "ScissorsPaper":
       console.log(userHand + ":" + computerHand + " - You win");
+      win(userHand, computerHand);
       break;
     /* Lose scenarios */
-    case "rockpaper":
-    case "paperscissors":
-    case "scissorsrock":
+    case "RockPaper":
+    case "PaperScissors":
+    case "ScissorsRock":
       console.log(userHand + ":" + computerHand + " - You lose");
+      lose(userHand, computerHand);
       break;
     /* Tie scenarios */
-    case "rockrock":
-    case "paperpaper":
-    case "scissorsscissors":
+    case "RockRock":
+    case "PaperPaper":
+    case "ScissorsScissors":
       console.log(userHand + ":" + computerHand + " - Tie");
+      tie(userHand, computerHand);
       break;
   }
 }
 
 function main() {
   rock_dom.addEventListener("click", function() {
-    play("rock");
+    play("Rock");
   });
 
   paper_dom.addEventListener("click", function() {
-    play("paper");
+    play("Paper");
   });
 
   scissors_dom.addEventListener("click", function() {
-    play("scissors");
+    play("Scissors");
   });
 }
 

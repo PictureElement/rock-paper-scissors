@@ -1,5 +1,11 @@
 html {
-  background: #527D99;
+  background: #e5e5e5;
+}
+
+body {
+  max-width: 480px;
+  margin: 0 auto;
+  box-shadow: 0 8px 17px 2px rgba(0,0,0,.14), 0 3px 14px 2px rgba(0,0,0,.12), 0 5px 5px -3px rgba(0,0,0,.2);
 }
 
 .container {
@@ -7,7 +13,7 @@ html {
 }
 
 /* Overwrites */
-.button.is-large {
+.button {
   width: 27.5vw;
   height: 27.5vw;
   font-size: 12vw;
@@ -90,7 +96,7 @@ html {
 /* Footer */
 .footer {
   padding: 15px;
-  background-color: #527D99;
+  background-color: #11547F;
   color: #fff;
   font-size: 4vw;
 }
@@ -149,14 +155,12 @@ html {
   .notification {
     font-size: 19.16px;
   }
-
-  
-  .button.is-large {
-    width: 142px; 
-    height: 142px;
-    font-size: 70px;
+  .button {
+    width: 131.719px; 
+    height: 131.719px;
+    font-size: 57.48px;
   }
   .footer {
-    font-size: 16px;
+    font-size: 19.16px;
   }
 }
