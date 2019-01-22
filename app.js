@@ -13,6 +13,18 @@ const scissors_dom = document.getElementById("scissors");
 const userHand_dom = document.getElementById("userHand");
 const computerHand_dom = document.getElementById("computerHand");
 
+function disableButtonClicks() {
+  rock_dom.style.pointerEvents = "none";
+  paper_dom.style.pointerEvents = "none";
+  scissors_dom.style.pointerEvents = "none";
+}
+
+function enableButtonClicks() {
+  rock_dom.style.pointerEvents = "auto";
+  paper_dom.style.pointerEvents = "auto";
+  scissors_dom.style.pointerEvents = "auto";
+}
+
 /* Get computer hand */
 function getComputerHand() {
   let num = Math.floor(Math.random() * 3); // 0, 1, or 2
@@ -51,6 +63,23 @@ function updateHand(hand, hand_dom) {
   }
 }
 
+function resetState() {
+  // Clear hands
+  for (let i = 0; i < userHand_dom.children.length; i++) {
+    userHand_dom.children[i].style.display = "none";
+    computerHand_dom.children[i].style.display = "none";
+  }
+  // Show question marks
+  userHand_dom.children[3].style.display = "block";
+  computerHand_dom.children[3].style.display = "block";
+  // Reset user border color
+  userHand_dom.classList.remove("green-border", "red-border", "yellow-border");
+  // Reset notification area
+  notification_dom.innerHTML = "Make your move";
+  // Enable button clicks
+  enableButtonClicks();
+}
+
 function win(userHand, computerHand) {
   // Update score
   userWins++;
@@ -62,12 +91,15 @@ function win(userHand, computerHand) {
   // Update computer hand
   updateHand(computerHand, computerHand_dom);
 
-  // Update color indication
+  // Update border color
   userHand_dom.classList.remove("green-border", "red-border", "yellow-border")
   userHand_dom.classList.add("green-border");
   
   // Notify
   notification_dom.innerHTML = `${userHand} beats ${computerHand}. You've won!`;
+
+  // Reset state
+  setTimeout(function() { resetState() }, 3000);
 }
 
 function lose(userHand, computerHand) {
@@ -81,12 +113,15 @@ function lose(userHand, computerHand) {
   // Update computer hand
   updateHand(computerHand, computerHand_dom);
   
-  // Update color indication
+  // Update border color
   userHand_dom.classList.remove("green-border", "red-border", "yellow-border")
   userHand_dom.classList.add("red-border");
 
   // Notify
   notification_dom.innerHTML = `${userHand} loses to ${computerHand}. You've lost.`;
+
+  // Reset state
+  setTimeout(function() { resetState() }, 3000);
 }
 
 function tie(userHand, computerHand) {
@@ -100,12 +135,15 @@ function tie(userHand, computerHand) {
   // Update computer hand
   updateHand(computerHand, computerHand_dom);
 
-  // Update color indication
+  // Update border color
   userHand_dom.classList.remove("green-border", "red-border", "yellow-border")
   userHand_dom.classList.add("yellow-border");
 
   // Notify
   notification_dom.innerHTML = `${computerHand} equals ${userHand}. It's a draw.`;
+
+  // Reset state
+  setTimeout(function() { resetState() }, 3000);
 }
 
 /* Play game */
@@ -138,14 +176,17 @@ function play(userHand) {
 
 function main() {
   rock_dom.addEventListener("click", function() {
+    disableButtonClicks();
     play("Rock");
   });
 
   paper_dom.addEventListener("click", function() {
+    disableButtonClicks();
     play("Paper");
   });
 
   scissors_dom.addEventListener("click", function() {
+    disableButtonClicks();
     play("Scissors");
   });
 }
